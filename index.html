@@ -1,90 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full Page Redirect</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fake School</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
-            overflow: hidden;
-            height: 100vh;
-            width: 100vw;
-        }
-        
-        .iframe-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-        
-        .iframe-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        
-        .key-hint {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
             font-family: Arial, sans-serif;
-            font-size: 14px;
-            z-index: 2;
-            opacity: 0.7;
-            transition: opacity 0.3s;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 40px;
+            text-align: center;
         }
-        
-        .key-hint:hover {
-            opacity: 1;
+        .box {
+            background: white;
+            padding: 30px;
+            max-width: 600px;
+            margin: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
-        
-        .key {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 2px 8px;
-            border-radius: 3px;
-            margin: 0 5px;
-            font-weight: bold;
+        button {
+            margin-top: 25px;
+            font-size: 18px;
+            padding: 12px 24px;
+            border: none;
+            background: #5865F2;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #4752C4;
         }
     </style>
 </head>
 <body>
-    <div class="iframe-container">
-        <iframe id="mainFrame" src="https://www.quiz-90.live" title="Main Content"></iframe>
-    </div>
-    
-    <div class="key-hint">
-        Press <span class="key">Q</span> to go to quiz-90.live
+    <div class="box">
+        <h1>Welcome to Fake School</h1>
+        <p>
+            Here you can find top tier pranks, such as when you are in class and want to prank your friends or teachers.
+            Just open our fake Discord by clicking the button below!
+        </p>
+        <button onclick="openDiscord()">Fake Discord!</button>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const mainFrame = document.getElementById('mainFrame');
-            
-            // Set the iframe to a default website
-            mainFrame.src = "https://www.quiz-90.live";
-            
-            // Keyboard event listener
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'q' || e.key === 'Q') {
-                    // Redirect to quiz-90.live
-                    window.location.href = "https://sppsk12.follettdestiny.com/portal/portal?app=Collections&appId=destiny-L5TX-NCBP&siteGuid=803D3B3E-D444-4BF2-A835-1D49ED010D91&nav=%2Fcollections%2Fpublic";
-                }
-            });
-        });
+        function openDiscord() {
+            window.location.href = "blocked/discord.com.html";
+        }
     </script>
 </body>
 </html>
